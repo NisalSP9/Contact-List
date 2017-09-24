@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Contacts</string>
+    <string name="searchable">Searchable</string>
+    <string name="menu_search">Search</string>
+</resources>

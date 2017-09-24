@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.android.example.cis.contaclist.view.MailSender">
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="To"
+        android:id="@+id/mailTo"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20px"
+        android:layout_below="@+id/mailTo"
+        android:layout_alignParentStart="true"
+        android:id="@+id/space2" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:hint="CC"
+        android:id="@+id/ccText"
+        android:layout_below="@+id/space2"
+        android:layout_alignParentStart="true" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20px"
+        android:layout_below="@+id/ccText"
+        android:layout_alignParentStart="true"
+        android:id="@+id/space3" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Subject"
+        android:id="@+id/mailSubject"
+        android:layout_below="@+id/space3"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/space3" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20px"
+        android:layout_below="@+id/mailSubject"
+        android:layout_alignParentStart="true"
+        android:id="@+id/space4" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="270dp"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:hint="Message"
+        android:gravity="top"
+        android:id="@+id/mailMessage"
+        android:layout_below="@+id/space4"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/space4" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send"
+        android:id="@+id/mailSend"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/mailClear" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear Message"
+        android:id="@+id/mailClear"
+        android:layout_alignTop="@+id/mailSend"
+        android:layout_alignEnd="@+id/mailMessage" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="reset"
+        android:id="@+id/resetAll"
+        android:layout_alignTop="@+id/mailSend"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>
